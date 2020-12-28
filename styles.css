@@ -1,0 +1,163 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body
+{
+    height: 100vh;
+    width: 100%;
+    background: url("./images/bg-pattern-top-desktop.svg") no-repeat;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    font-family: 'Spartan',sans-serif;
+    font-size: 15px;
+}
+
+.left-box{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.left-box h1
+{
+    color: hsl(300, 43%, 22%);
+    font-size: 3.5rem;
+    font-weight: 700;
+    
+}
+.left-box p 
+{
+    font-weight: 400;
+    color: hsl(303, 10%, 53%);
+}
+.rating{
+    display: flex;
+    flex-direction: column;
+}
+.rating img{
+    padding: 5px;
+}
+.second
+{
+    position: relative;
+    left: 50px;
+}
+.third{
+    position: relative;
+    left: 100px;
+}
+.first, .second, .third
+{
+    margin: 10px;
+    padding: 0 20px 0 20px;
+    background: hsl(300, 24%, 96%);
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.rating p 
+{
+    padding: 20px;
+    font-weight: 700;
+    color: hsl(300, 43%, 22%);
+}
+
+.reviews
+{
+    align-items: center;
+    color: hsl(0, 0%, 100%);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "colton irene anne";
+    grid-gap: 20px;
+    width: 80%;
+}
+.colton
+{
+    background:  hsl(300, 43%, 22%);
+    border: none;
+    border-radius: 10px;
+    padding: 30px;
+    grid-area: colton;
+}
+.irene
+{
+    background:  hsl(300, 43%, 22%);
+    border: none;
+    border-radius: 10px;
+    padding: 30px;
+    grid-area: irene;
+    position: relative;
+    top: 30px;
+}
+.anne
+{
+    background:  hsl(300, 43%, 22%);
+    border: none;
+    border-radius: 10px;
+    padding: 30px;
+    grid-area: anne;
+    position: relative;
+    top: 60px;
+}
+.reviews img
+{
+    border: 2px solid white;
+    border-radius: 100%;
+    position: relative;
+    top: 5px;
+    left: 10px;
+}
+
+.colton, .irene, .anne
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.reviews .name
+{
+    padding-left: 30px;
+    text-align: left;
+    position: relative;
+    top: 20px;
+}
+.text
+{
+    padding: 30px;
+    text-align: left;
+    flex-wrap: wrap;
+    line-height: 1.5rem;
+}
+
+@media screen and (max-width: 700px) {
+    .left-box, .rating, .reviews{
+        margin-top: 10px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .first, .second, .third
+    {
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .second, .third
+    {
+        position: relative;
+        left: 0;
+    }
+   
+}
